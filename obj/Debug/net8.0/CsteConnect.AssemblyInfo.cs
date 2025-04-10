@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsteConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37af21a28fd82ed3282458d2dad3047397e1ebed")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsteConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsteConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
