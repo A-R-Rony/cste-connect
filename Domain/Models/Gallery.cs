@@ -1,28 +1,27 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CsteConnect.Models;
+namespace CsteConnect.Domain.Models;
 
-public class UserAchievement
+public class Gallery
 {
     [Key]
-    public int UserAchievementId { get; set; }
-        
-    // Foreign key for User
+    public int Id { get; set; }
     public int UserId { get; set; }
-    [ForeignKey("UserId")]
-    public User User { get; set; }
         
-    public string AchievedBy { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
+    public string FileUrl { get; set; }
+    public string FileName { get; set; }
+        
+    // Foreign key for User
+    public int CreatedById { get; set; }
+      
+    public int UpdatedById { get; set; }
         
     [DataType(DataType.DateTime)]
     public DateTime CreatedAt { get; set; }
         
     [DataType(DataType.DateTime)]
     public DateTime UpdatedAt { get; set; }
-        
-    public string CreatedBy { get; set; }
-    public string UpdatedBy { get; set; }
 }

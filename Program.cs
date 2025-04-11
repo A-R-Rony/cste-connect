@@ -1,4 +1,4 @@
-using CsteConnect.Models;
+using CsteConnect.Data;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 

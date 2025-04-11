@@ -1,18 +1,23 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace CsteConnect.Models;
+namespace CsteConnect.Domain.Models;
 
 public class User
 {
     [Key]
-    public int UserID { get; set; }
-    [Required]
-    [EmailAddress]
+    public int Id { get; set; }
     public string Email { get; set; }
-    [Required]
     public string Password { get; set; }
-    
-    public UserDetails UserDetails { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string ProfilePicture { get; set; }
+
+    public User()
+    {
+        
+    }
+    /*
+     public UserDetails UserDetails { get; set; }
     
     public ICollection<UserSocialMedia> UserSocialMedias { get; set; }
     public ICollection<AlumniDirectory> AlumniDirectories { get; set; }
@@ -25,4 +30,5 @@ public class User
     public ICollection<Donation> Donations { get; set; }
     public ICollection<Post> Posts { get; set; }
     public ICollection<Job> Jobs { get; set; }
+    */
 }

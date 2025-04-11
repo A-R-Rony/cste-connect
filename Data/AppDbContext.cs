@@ -1,6 +1,7 @@
+using CsteConnect.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CsteConnect.Models;
+namespace CsteConnect.Data;
 
 public class AppDbContext : DbContext
 {
@@ -19,7 +20,7 @@ public class AppDbContext : DbContext
     public DbSet<News> News { get; set; }
     public DbSet<Activity> Activities { get; set; }
     public DbSet<Donation> Donations { get; set; }
-    public DbSet<Post> Posts { get; set; }
+    
     public DbSet<Job> Jobs { get; set; }
 
 }

@@ -1,25 +1,21 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CsteConnect.Models;
+namespace CsteConnect.Domain.Models;
 
 public class News
 {
     [Key]
-    public int NewsId { get; set; }
+    public int Id { get; set; }
+    public int UserId{ get; set; }
         
     public string Title { get; set; }
     public string Content { get; set; }
-    public string ImageUrl { get; set; }
-    public string DonorId { get; set; }
-    public string DurationId { get; set; }
-        
+    public string FileUrl { get; set; }
+     
     // Foreign key for creator User
-    public int CreatedBy { get; set; }
-    [ForeignKey("CreatedBy")]
-    public User Creator { get; set; }
-        
-    public string UpdatedBy { get; set; }
+    public int CreatedById { get; set; }
+    public int UpdatedById { get; set; }
         
     [DataType(DataType.DateTime)]
     public DateTime CreatedAt { get; set; }

@@ -1,12 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CsteConnect.Models;
+namespace CsteConnect.Domain.Models;
 
 public class Event
 {
     [Key]
-    public int EventId { get; set; }
+    public int Id { get; set; }
+    public int UserId { get; set; }
         
     public string Title { get; set; }
     public string Description { get; set; }
@@ -25,9 +26,10 @@ public class Event
     public DateTime UpdatedAt { get; set; }
         
     // Foreign key for creator User
-    public int CreatedBy { get; set; }
-    [ForeignKey("CreatedBy")]
+    
+   /* [ForeignKey("CreatedBy")]
     public User Creator { get; set; }
-        
-    public string UpdatedBy { get; set; }
+    */
+    public int CreatedById { get; set; }
+    public int UpdatedById { get; set; }
 }
